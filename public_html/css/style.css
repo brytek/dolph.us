@@ -1,0 +1,252 @@
+/***** About *****
+ *
+ * Theme: Minimal Mono
+ * Description: A clean, minimalist design 
+ * Author: Dolphus Bryant
+ * Contact: dolphus@dolph.us
+ *
+ */
+
+
+/***** Global Properties *****/
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0px auto;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Roboto Mono", monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+button {
+  cursor: pointer;
+}
+
+section {
+  margin-top: 60px;
+  font-size: 18px
+}
+
+.container {
+  width: 800px;
+  margin: 0px auto;
+  flex: 1;
+}
+
+/***** Header *****/
+.banner {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin: 0px 0px 50px 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.about-bg {
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../img/banners/about-bg.jpg");
+}
+
+.contact-bg {
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../img/banners/contact-bg.jpg");
+}
+
+.projects-bg {
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../img/banners/projects-bg.jpg");
+}
+
+.posts-bg {
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../img/banners/posts-bg-2.jpg");
+}
+
+.resume-bg {
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../img/banners/resume-bg.jpg");
+}
+
+/***** Navigation *****/
+nav {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li {
+  flex-flow: 1;
+  list-style-type: none;
+  padding: 0px 15px;
+}
+
+/***** About *****/
+.about-img {
+  border-radius: 100%;
+  margin: 5px 10px 10px 0px;
+  filter: grayscale(1);
+  float: left;
+  height: 150px;
+}
+
+/***** Blog *****/
+.post {
+  margin-bottom: 60px;
+}
+
+.post-details {
+  font-size: .66em;
+  font-style: italic;
+  padding-left: 25px;
+}
+
+/***** Projects *****/
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  text-align: center;
+  width: 260px;
+  margin: 2px;
+}
+
+.project p {
+  text-align: left;
+}
+
+.project-thumbnail {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/***** Contact *****/
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 310px;
+  justify-content: space-between;
+}
+
+.contact-form * {
+  font-family: "Ubuntu Mono";
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.contact-form textarea {
+  height: 200px;
+}
+
+.contact-links {
+  align-items: baseline;
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: auto;  
+}
+
+.contact-links img {
+  margin-right: 15px;
+}
+
+/***** Code *****/
+pre.lang-html {
+  border: 7px solid #006400;
+  line-height: 0.2em;
+}
+
+.code-html h1 {
+  background-color: #006400;
+  margin-bottom: 0;
+  padding: 5px;
+  font-family: monospace;
+}
+
+pre.lang-css {
+  border: 7px solid #C23B22;
+
+}
+
+.code-css h1 {
+  background-color: #C23B22;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+pre.lang-js {
+  border: 7px solid #2D4571;
+}
+
+.code-js h1 {
+  background-color: #2D4571;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+
+/***** Footer *****/
+footer {
+  font-style: italic;
+  text-align: center;
+}
