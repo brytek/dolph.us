@@ -14,55 +14,47 @@
 <!-- Main Content -->
 <section class="container">
   <h1>// Posts</h1>
-  <article class="post">
-    <h2>Sticky Footer with Flexbox</h2>
-    <p class="post-details">by Dolphus Bryant. Posted <time>2017-04-16 09:52</time></p>
-    <p>Today I learned how to create a footer that sticks to the bottom of your page using Flexbox. This is the same method I used when styling the footer of this site. It's super simple, and much less frustrating than fiddling with positioning and margins.</p>
-    <p>Check it out:</p>
-    <div class="code-html">
-      <h1>HTML:</h1>
-      <pre class="prettyprint lang-html linenums">
-<xmp><body>
-  <div class="content">
-    <p>Content</p>
-  </div>
-  <footer class="footer"></footer>
-</body></xmp></pre>
-    </div>
-    <div class="code-css">
-      <h1>CSS:</h1>
-      <pre class="prettyprint lang-css linenums">
-html {
-  height: 100%;
-}
+  <?php
 
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+  //predifined fetch constants
+  define('MYSQL_BOTH',MYSQLI_BOTH);
+  define('MYSQL_NUM',MYSQLI_NUM);
+  define('MYSQL_ASSOC',MYSQLI_ASSOC);
 
-.content {
-  flex: 1;
-}</pre>
-    </div>
-    <p class="post-details">Sources: <cite><a href="https://css-tricks.com/couple-takes-sticky-footer/">CSS-Tricks.com</a></cite></p>
-  </article>
-  
-  <article class="post">
-    <h2>Post Title</h2>
-    <p class="post-details">by Dolphus Bryant. Posted <time>Timestamp</time></p>
-    <p>Post content.</p>      
-    <p class="post-details">Sources: <cite><a href="#">References</a></cite></p>
-  </article>
-  
-  <article class="post">
-    <h2>Post Title</h2>
-    <p class="post-details">by Dolphus Bryant. Posted <time>Timestamp</time></p>
-    <p>Post content.</p>      
-    <p class="post-details">Sources: <cite><a href="#">References</a></cite></p>
-  </article>
-</section>
+  include "db-config.php";
+
+  global $host;
+  global $user;
+  global $pass;
+  global $db;
+
+  $connection = mysqli_connect($host, $user, $pass, $db);
+
+  if (!$connection)
+  {
+    echo 'Failed to Connect to Database: ' . mysqli_error();
+  }
+
+  $sql = "SELECT * FROM post";
+  $data = mysqli_query($connection, $sql);
+
+  if (!$data)
+  {
+    die("Could not get data: " . mysqli_error());
+  }
+
+  while ($row = mysqli_fetch_array($data, MYSQL_BOTH))
+  {
+    echo "<article class='post'>
+            <h2>" . $row[1] . "</h2>
+            <p class='post-details'>by Dolphus Bryant. Posted <time>" . $row[5] . "</time></p>
+            <p>" . $row[2] . "</p>      
+            <p class='post-details'>Sources: <cite>" . $row[4] . "</cite></p>
+            <p class='post-details'>Tags: <cite>" . $row[3] . "</cite></p>
+          </article>";
+  }
+
+  ?>
 
 <!-- Scripts -->
 <script type="text/javascript" src="js/prettify.js"></script>
