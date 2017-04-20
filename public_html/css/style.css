@@ -9,6 +9,11 @@
 
 
 /***** Global Properties *****/
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -16,32 +21,19 @@ html, body {
   font-family: "Ubuntu Mono", monospace;
 }
 
-html {
-    width: 100vw;
-    overflow-x: hidden;
-}
-
 body {
-  min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
-h1 {
-  font-family: "Roboto Mono", monospace;
-}
+h1 { font-family: "Roboto Mono", monospace; }
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none; }
 
-p {
-  line-height: 1.5;
-}
+p { line-height: 1.5; }
 
-button {
-  cursor: pointer;
-}
+button { cursor: pointer; }
 
 section {
   margin-top: 60px;
@@ -49,7 +41,7 @@ section {
 }
 
 .container {
-  width: 800px;
+  width: 960px;
   margin: 0px auto;
   flex: 1;
 }
@@ -138,9 +130,7 @@ nav ul li {
 }
 
 /***** Blog *****/
-.post {
-  margin-bottom: 60px;
-}
+.post { margin-bottom: 60px; }
 
 .post-details {
   font-size: .66em;
@@ -148,11 +138,30 @@ nav ul li {
   padding-left: 25px;
 }
 
+.new-post form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.new-post form > input, textarea, button {
+  font-family: "Ubuntu Mono";
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.new-post form > textarea {
+  height: 300px;
+}
+
 /***** Projects *****/
 
 .projects {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .project {
@@ -161,9 +170,7 @@ nav ul li {
   margin: 2px;
 }
 
-.project p {
-  text-align: left;
-}
+.project p { text-align: left; }
 
 .project-thumbnail {
   width: 200px;
@@ -175,14 +182,14 @@ nav ul li {
 /***** Contact *****/
 .contact {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   width: 400px;
-  height: 310px;
+  height: 350px;
   justify-content: space-between;
 }
 
@@ -192,23 +199,26 @@ nav ul li {
   padding: 5px;
 }
 
-.contact-form textarea {
-  height: 200px;
-}
+.contact-form textarea { height: 200px; }
 
 .contact-links {
   align-items: baseline;
-  height: 310px;
+  width: 300px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   list-style-type: none;
-  margin: auto;  
+  margin: 0;
 }
 
 .contact-links img {
+  vertical-align: middle;
   margin-right: 15px;
+  width: 35px;
 }
+
+.contact-links li { align-self: auto; }
 
 /***** Code *****/
 pre.lang-html {
@@ -223,10 +233,7 @@ pre.lang-html {
   font-family: monospace;
 }
 
-pre.lang-css {
-  border: 7px solid #C23B22;
-
-}
+pre.lang-css { border: 7px solid #C23B22; }
 
 .code-css h1 {
   background-color: #C23B22;
@@ -234,9 +241,7 @@ pre.lang-css {
   padding: 5px;
 }
 
-pre.lang-js {
-  border: 7px solid #2D4571;
-}
+pre.lang-js { border: 7px solid #2D4571; }
 
 .code-js h1 {
   background-color: #2D4571;
@@ -247,6 +252,7 @@ pre.lang-js {
 
 /***** Footer *****/
 footer {
+  margin-top: 20px;
   font-style: italic;
   text-align: center;
 }
