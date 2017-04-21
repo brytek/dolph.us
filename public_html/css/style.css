@@ -1,14 +1,59 @@
-/***** About *****
+/*****************************************************************************\
+
+  ABOUT
+
+\*****************************************************************************/
+
+
+
+/**
  *
- * Theme: Minimal Mono
- * Description: A clean, minimalist design 
+ * Theme: Minimal Monospace
+ * Description: A clean, minimal design 
  * Author: Dolphus Bryant
  * Contact: dolphus@dolph.us
  *
  */
 
 
-/***** Global Properties *****/
+
+/*****************************************************************************\
+
+  TABLE OF CONTENTS
+
+\*****************************************************************************/
+
+
+
+/**
+ *
+ * 1. Globals
+ * 2. Banners
+ * 3. Navigation
+ * 4. About
+ * 5. Posts
+ * 6. Pretty Code
+ * 7. Projects
+ * 8. Contact
+ * 9. Footer
+ *
+ */
+
+
+
+/*****************************************************************************\
+
+  1. GLOBALS
+
+\*****************************************************************************/
+
+
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -16,45 +61,44 @@ html, body {
   font-family: "Ubuntu Mono", monospace;
 }
 
-html {
-    width: 100vw;
-    overflow-x: hidden;
-}
-
 body {
-  min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
-h1 {
-  font-family: "Roboto Mono", monospace;
-}
+h1 { font-family: "Roboto Mono", monospace; }
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none; }
 
-p {
-  line-height: 1.5;
-}
+p { line-height: 1.5; }
 
-button {
+button { 
   cursor: pointer;
+  width: auto;
 }
 
 section {
   margin-top: 60px;
-  font-size: 18px
+  font-size: 18px;
 }
 
 .container {
-  width: 800px;
+  width: 960px;
   margin: 0px auto;
   flex: 1;
 }
 
-/***** Header *****/
+
+
+/*****************************************************************************\
+
+  2. BANNERS
+
+\*****************************************************************************/
+
+
+
 .banner {
   background-size: cover;
   background-position: center;
@@ -110,7 +154,16 @@ section {
     url("../img/banners/resume-bg.jpg");
 }
 
-/***** Navigation *****/
+
+
+/*****************************************************************************\
+
+  3. NAVIGATION
+
+\*****************************************************************************/
+
+
+
 nav {
   display: flex;
   align-items: baseline;
@@ -128,7 +181,16 @@ nav ul li {
   padding: 0px 15px;
 }
 
-/***** About *****/
+
+
+/*****************************************************************************\
+
+  4. ABOUT
+
+\*****************************************************************************/
+
+
+
 .about-img {
   border-radius: 100%;
   margin: 5px 10px 10px 0px;
@@ -137,10 +199,17 @@ nav ul li {
   height: 150px;
 }
 
-/***** Blog *****/
-.post {
-  margin-bottom: 60px;
-}
+
+
+/*****************************************************************************\
+
+  5. POSTS
+
+\*****************************************************************************/
+
+
+
+.post { margin-bottom: 60px; }
 
 .post-details {
   font-size: .66em;
@@ -148,69 +217,38 @@ nav ul li {
   padding-left: 25px;
 }
 
-/***** Projects *****/
-
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.project {
-  text-align: center;
-  width: 260px;
-  margin: 2px;
-}
-
-.project p {
-  text-align: left;
-}
-
-.project-thumbnail {
-  width: 200px;
-  height: 200px;
-  border: 1px solid black;
-  padding: 10px;
-}
-
-/***** Contact *****/
-.contact {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.contact-form {
+.new-post form {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 310px;
   justify-content: space-between;
+  width: 400px;
 }
 
-.contact-form * {
+.new-post form > input, textarea, button {
   font-family: "Ubuntu Mono";
   border: 1px solid black;
   padding: 5px;
+  margin-bottom: 5px;
 }
 
-.contact-form textarea {
-  height: 200px;
+.new-post form > textarea {
+  height: 300px;
 }
 
-.contact-links {
-  align-items: baseline;
-  height: 310px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  list-style-type: none;
-  margin: auto;  
+
+
+/*****************************************************************************\
+
+  6. PRETTY CODE
+
+\*****************************************************************************/
+
+
+
+prettyprint {
+  width: 90px;
 }
 
-.contact-links img {
-  margin-right: 15px;
-}
-
-/***** Code *****/
 pre.lang-html {
   border: 7px solid #006400;
   line-height: 0.2em;
@@ -221,32 +259,130 @@ pre.lang-html {
   margin-bottom: 0;
   padding: 5px;
   font-family: monospace;
+  font-size: 1em;
 }
 
-pre.lang-css {
-  border: 7px solid #C23B22;
-
-}
+pre.lang-css { border: 7px solid #C23B22; }
 
 .code-css h1 {
   background-color: #C23B22;
   margin-bottom: 0;
   padding: 5px;
+  font-size: 1em;
 }
 
-pre.lang-js {
-  border: 7px solid #2D4571;
-}
+pre.lang-js { border: 7px solid #2D4571; }
 
 .code-js h1 {
   background-color: #2D4571;
   margin-bottom: 0;
   padding: 5px;
+  font-size: 1em;
+}
+
+pre.lang-php { border: 7px solid #b19cd9; }
+
+.code-php h1 {
+  background-color: #b19cd9;
+  margin-bottom: 0;
+  padding: 5px;
+  font-family: monospace;
+  font-size: 1em;
 }
 
 
-/***** Footer *****/
+
+/*****************************************************************************\
+
+  7. PROJECTS
+
+\*****************************************************************************/
+
+
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project {
+  text-align: center;
+  width: 260px;
+  margin: 2px;
+}
+
+.project p { text-align: left; }
+
+.project-thumbnail {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+
+
+/*****************************************************************************\
+
+  8. CONTACT
+
+\*****************************************************************************/
+
+
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 350px;
+  justify-content: space-between;
+}
+
+.contact-form * {
+  font-family: "Ubuntu Mono";
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.contact-form textarea { height: 200px; }
+
+.contact-links {
+  align-items: baseline;
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+}
+
+.contact-links li a img {
+  vertical-align: middle;
+  margin-right: 15px;
+  width: 30px;
+}
+
+.contact-links li { align-self: auto; }
+
+
+
+/*****************************************************************************\
+
+  9. FOOTER
+
+\*****************************************************************************/
+
+
+
 footer {
+  margin-top: 20px;
   font-style: italic;
   text-align: center;
 }
