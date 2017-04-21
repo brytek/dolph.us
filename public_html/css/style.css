@@ -1,14 +1,54 @@
-/***** About *****
+/*****************************************************************************\
+
+  ABOUT
+
+\*****************************************************************************/
+
+
+
+/*
  *
- * Theme: Minimal Mono
- * Description: A clean, minimalist design 
+ * Theme: Minimal Monospace
+ * Description: A clean, minimal design 
  * Author: Dolphus Bryant
  * Contact: dolphus@dolph.us
  *
  */
 
 
-/***** Global Properties *****/
+
+/*****************************************************************************\
+
+  TABLE OF CONTENTS
+
+\*****************************************************************************/
+
+
+
+/*
+ *
+ * 1. Globals
+ * 2. Banners
+ * 3. Navigation
+ * 4. About
+ * 5. Posts
+ * 6. Pretty Code
+ * 7. Projects
+ * 8. Contact
+ * 9. Footer
+ *
+ */
+
+
+
+/*****************************************************************************\
+
+  1. GLOBALS
+
+\*****************************************************************************/
+
+
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -37,7 +77,7 @@ button { cursor: pointer; }
 
 section {
   margin-top: 60px;
-  font-size: 18px
+  font-size: 18px;
 }
 
 .container {
@@ -46,7 +86,16 @@ section {
   flex: 1;
 }
 
-/***** Header *****/
+
+
+/*****************************************************************************\
+
+  2. BANNERS
+
+\*****************************************************************************/
+
+
+
 .banner {
   background-size: cover;
   background-position: center;
@@ -102,7 +151,16 @@ section {
     url("../img/banners/resume-bg.jpg");
 }
 
-/***** Navigation *****/
+
+
+/*****************************************************************************\
+
+  3. NAVIGATION
+
+\*****************************************************************************/
+
+
+
 nav {
   display: flex;
   align-items: baseline;
@@ -120,7 +178,16 @@ nav ul li {
   padding: 0px 15px;
 }
 
-/***** About *****/
+
+
+/*****************************************************************************\
+
+  4. ABOUT
+
+\*****************************************************************************/
+
+
+
 .about-img {
   border-radius: 100%;
   margin: 5px 10px 10px 0px;
@@ -129,7 +196,16 @@ nav ul li {
   height: 150px;
 }
 
-/***** Blog *****/
+
+
+/*****************************************************************************\
+
+  5. POSTS
+
+\*****************************************************************************/
+
+
+
 .post { margin-bottom: 60px; }
 
 .post-details {
@@ -156,7 +232,53 @@ nav ul li {
   height: 300px;
 }
 
-/***** Projects *****/
+
+
+/*****************************************************************************\
+
+  6. PRETTY CODE
+
+\*****************************************************************************/
+
+
+
+pre.lang-html {
+  border: 7px solid #006400;
+  line-height: 0.2em;
+}
+
+.code-html h1 {
+  background-color: #006400;
+  margin-bottom: 0;
+  padding: 5px;
+  font-family: monospace;
+}
+
+pre.lang-css { border: 7px solid #C23B22; }
+
+.code-css h1 {
+  background-color: #C23B22;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+pre.lang-js { border: 7px solid #2D4571; }
+
+.code-js h1 {
+  background-color: #2D4571;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+
+
+/*****************************************************************************\
+
+  7. PROJECTS
+
+\*****************************************************************************/
+
+
 
 .projects {
   display: flex;
@@ -179,7 +301,16 @@ nav ul li {
   padding: 10px;
 }
 
-/***** Contact *****/
+
+
+/*****************************************************************************\
+
+  8. CONTACT
+
+\*****************************************************************************/
+
+
+
 .contact {
   display: flex;
   justify-content: space-between;
@@ -220,37 +351,16 @@ nav ul li {
 
 .contact-links li { align-self: auto; }
 
-/***** Code *****/
-pre.lang-html {
-  border: 7px solid #006400;
-  line-height: 0.2em;
-}
-
-.code-html h1 {
-  background-color: #006400;
-  margin-bottom: 0;
-  padding: 5px;
-  font-family: monospace;
-}
-
-pre.lang-css { border: 7px solid #C23B22; }
-
-.code-css h1 {
-  background-color: #C23B22;
-  margin-bottom: 0;
-  padding: 5px;
-}
-
-pre.lang-js { border: 7px solid #2D4571; }
-
-.code-js h1 {
-  background-color: #2D4571;
-  margin-bottom: 0;
-  padding: 5px;
-}
 
 
-/***** Footer *****/
+/*****************************************************************************\
+
+  9. FOOTER
+
+\*****************************************************************************/
+
+
+
 footer {
   margin-top: 20px;
   font-style: italic;

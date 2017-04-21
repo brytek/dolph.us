@@ -1,7 +1,6 @@
 <?php
   $title = "Contact";
   include "static/header.php";
-  include "static/db-connection.php";
 ?>
 
 <!-- Banner -->
@@ -14,7 +13,7 @@
 
 <!-- Main Content -->
 <section class="container">
-  <h1>// Contact Me</h1>
+  <h1>// Contact</h1>
   <div class="contact">
     <form class="contact-form" action="#" method="post">
       <input placeholder="Your name" type="text" required autofocus/>
