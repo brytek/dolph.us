@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Dolphus - <?php echo $title; ?></title>
+  <title>Dolphus - <?= $title; ?></title>
   <meta name="description" content="Dolphus Bryant, resume, portfolio"/>
   <meta name="author" content="Dolphus Bryant"/>
   <link rel="icon" href="favicon.ico"/>

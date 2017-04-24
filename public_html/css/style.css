@@ -221,7 +221,7 @@ nav ul li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 400px;
+  width: 100%;
 }
 
 .new-post form > input, textarea, button {
@@ -231,8 +231,9 @@ nav ul li {
   margin-bottom: 5px;
 }
 
-.new-post form > textarea {
+.new-post textarea {
   height: 300px;
+  width: 100%;
 }
 
 
@@ -339,7 +340,7 @@ pre.lang-php { border: 7px solid #b19cd9; }
 .contact-form {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 600px;
   height: 350px;
   justify-content: space-between;
 }
@@ -350,7 +351,10 @@ pre.lang-php { border: 7px solid #b19cd9; }
   padding: 5px;
 }
 
-.contact-form textarea { height: 200px; }
+.contact-form textarea { 
+  height: 200px;
+  width: 600px;
+}
 
 .contact-links {
   align-items: baseline;

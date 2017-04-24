@@ -6,6 +6,7 @@
 </footer>
 
 <!-- Scripts -->
-
+  <script src="../ckeditor/ckeditor.js"></script>
+  <script>CKEDITOR.replace( 'ck-editor' );</script>
 </body>
 </html>

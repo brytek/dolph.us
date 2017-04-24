@@ -19,7 +19,7 @@
       <input placeholder="Your name" type="text" required autofocus/>
       <input placeholder="Your email address" type="email" required/>
       <input placeholder="Message subject" type="text" required/>
-      <textarea placeholder="Type your message here" required></textarea>
+      <textarea id="ck-editor" placeholder="Type your message here" required></textarea>
       <button name="submit" type="submit" id="contact-form-submit" data-submit="Sending...">Send</button>
     </form>
     <ul class="contact-links">
