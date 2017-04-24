@@ -18,12 +18,6 @@ if (!$connection)
   echo 'Failed to Connect to Database: ' . mysqli_error();
 }
 
-// Prepare Query
-/*$title = $_POST['title'];
-$content = $_POST['content'];
-$tags = $_POST['tags'];
-$sources = $_POST['sources'];*/
-
 $title = mysqli_real_escape_string($connection, htmlspecialchars($_POST['title']));
 $content = mysqli_real_escape_string($connection, htmlspecialchars($_POST['content']));
 $tags = mysqli_real_escape_string($connection, htmlspecialchars($_POST['tags']));

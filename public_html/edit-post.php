@@ -17,7 +17,8 @@ if (!$connection)
 
 
 // Make Query
-$sql = "SELECT * FROM post ORDER BY post_ID DESC";
+$post = $_GET['id'];
+$sql = "SELECT * FROM post WHERE post_ID = " . $post;
 $data = mysqli_query($connection, $sql);
 
 if (!$data)
@@ -28,7 +29,7 @@ if (!$data)
 
 
 // Return Results
-while ($row = mysqli_fetch_array($data, MYSQL_BOTH))
+while ($row = mysqli_fetch_array($data, MYSQLI_BOTH))
 {
   $post_ID  = $row[0];
   $title    = $row[1];

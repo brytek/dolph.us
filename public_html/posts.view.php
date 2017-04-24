@@ -13,8 +13,9 @@
 
 <!-- Main Content -->
 <section class="container">
-  <span style="align-items:baseline; display:flex; justify-content:space-between"><h1>// Posts</h1><button style="height:35px"><a href="new-post.php">New Post</a></button></span>
+  <span style="align-items:baseline; display:flex; justify-content:space-between"><h1>// Posts</h1><button style="height:35px"><a href="new-post.php">New Post</a></button></span>  
   <?php include "posts.php"; ?>
+  
 </section>
 <!-- Scripts -->
 <script type="text/javascript" src="js/prettify.js"></script>

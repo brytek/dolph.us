@@ -28,7 +28,7 @@ if (!$data)
 
 
 // Return Results
-while ($row = mysqli_fetch_array($data, MYSQL_BOTH))
+while ($row = mysqli_fetch_array($data, MYSQLI_BOTH))
 {
   $post_ID  = $row[0];
   $title    = $row[1];
@@ -39,13 +39,13 @@ while ($row = mysqli_fetch_array($data, MYSQL_BOTH))
   $modified = $row[6];
   
   $html = <<<HTML
-  <article class='post'>
+  <article id='$post_ID' class='post'>
     <h2>$title</h2>
     <p class='post-details'>by Dolphus Bryant. Posted <time>$created</time> | Modified: <time>$modified</time></p>
     <p>$content</p>
     <p class='post-details'>Sources: <cite>$sources</cite></p>
     <p class='post-details'>Tags: <cite>$tags</cite></p>
-    <a href='delete-post.php'>Delete</a> | <a href='edit-post.view.php?='>Edit</a>
+    <a href='delete-post.php'>Delete</a> | <a href='edit-post.view.php?id=$post_ID'>Edit</a>
   </article>
 HTML;
   
@@ -55,6 +55,7 @@ HTML;
 
 
 // Close Database Connection
+mysqli_free_result($data);
 mysqli_close($connection);
 
 ?>
